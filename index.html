@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #anime{width:960px; height:540px}
+        body{background: lightgreen;}
+        #mytext, #but{font-size: 20px;color:white;
+            font-style: italic;}
+        #but{background: yellow;}
+    </style>
+</head>
+<body>
+<video src="titanic.mp4" id="movie"></video>
+<button id="but">PLAY</button>
+<div id="mytext">The video hasn't been started.</div>
+   <script type="text/javascript">
+    let playstate = "stop"
+    but.onclick = function () {
+        if (playstate == "stop"){
+            movie.play();
+            but.innerHTML = "STOP"
+            but.style.background = "yellow"
+            playstate = "play";
+         }else if (playstate =="play") {
+            movie.pause()
+            but.innerHTML = "PLAY"
+            but.style.background = "yellow"
+            playstate = "stop";
+        }
+
+        document.body.style.background = "black";
+        mytext.innerHTML = "The video is playing"
+    }
+   </script>
+</body>
+</html>
